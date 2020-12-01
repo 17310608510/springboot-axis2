@@ -1,0 +1,7 @@
+#服务配置
+server:
+  servlet:
+    #服务名
+    context-path: /
+  #服务端口号 默认为8080
+  port: 8181

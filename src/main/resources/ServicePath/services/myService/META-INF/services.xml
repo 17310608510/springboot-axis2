@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceGroup>
+    <service name="demoService" scope="application"><!--接口名称-->
+        <description>
+            axis2 实现的webservice样例<!--接口描述-->
+        </description>
+
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-only" class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+        </messageReceivers>
+        <!--接口实现类-->
+        <parameter name="ServiceClass">com.example.demo.service.impl.DemoServiceImpl</parameter>
+     <!--   <parameter name="ServiceObjectSupplier">org.apache.axis2.extensions.spring.receivers.SpringServletContextObjectSupplier</parameter>-->
+    </service>
+</serviceGroup>
